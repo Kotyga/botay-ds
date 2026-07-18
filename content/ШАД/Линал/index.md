@@ -1,4 +1,0 @@
----
-title: Алгосы
----
-# Coming soon...
