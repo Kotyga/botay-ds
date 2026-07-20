@@ -24,6 +24,8 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 
+export { default as YandexMetrika } from "./YandexMetrika"
+
 export {
   ArticleTitle,
   Content,

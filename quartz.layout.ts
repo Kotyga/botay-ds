@@ -5,7 +5,9 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+  Component.YandexMetrika(),
+],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/Kotyga/botay-ds",
