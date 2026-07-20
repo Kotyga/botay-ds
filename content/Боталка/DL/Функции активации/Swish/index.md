@@ -30,7 +30,7 @@ def swish(x):
 
 ## Визуализация
 
-![Swish](content/attach/swish.png)
+![[swish.png]]
 
 ---
 # Ссылки:

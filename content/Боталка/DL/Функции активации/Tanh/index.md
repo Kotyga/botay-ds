@@ -27,7 +27,7 @@ def tanh(x):
 
 ## Визуализация
 
-![Tanh](content/attach/tanh.png)
+![[tanh.png]]
 
 ---
 # Ссылки:

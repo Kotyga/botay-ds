@@ -27,7 +27,7 @@ def relu(x):
 
 ## Визуализация
 
-![RELU](content/attach/relu.png)
+![[relu.png]]
 
 ---
 # Ссылки:

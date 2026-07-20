@@ -32,11 +32,11 @@ def selu(x, lam=1.0507009873554804934193349852946, alpha=1.673263242354377284817
 
 ## Визуализация
 
-![Sigmoid](content/attach/selu_lam.png)
+![[selu_lam.png]]
 
-![Sigmoid](content/attach/selu_alpha.png)
+![[selu_alpha.png]]
 
-![Sigmoid](content/attach/selu.png)
+![[selu.png]]
 
 ---
 # Ссылки:

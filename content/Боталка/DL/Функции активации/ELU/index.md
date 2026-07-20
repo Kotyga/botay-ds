@@ -26,7 +26,8 @@ def elu(x, alpha):
 
 ## Визуализация
 
-![ELU](content/attach/elu.png)
+
+![[elu.png]]
 
 ---
 # Ссылки:

@@ -28,7 +28,7 @@ def sigmoid(x):
 
 ## Визуализация
 
-![Sigmoid](content/attach/sigmoid.png)
+![[sigmoid.png]]
 
 ---
 # Ссылки:

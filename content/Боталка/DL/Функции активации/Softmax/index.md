@@ -32,7 +32,7 @@ def softmax(x):
 
 ## Визуализация
 
-![Softmax](content/attach/softmax.png)
+![[softmax.png]]
 
 ---
 # Ссылки:

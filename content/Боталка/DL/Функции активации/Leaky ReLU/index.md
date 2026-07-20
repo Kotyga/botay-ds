@@ -27,7 +27,7 @@ def leaky_relu(x, alpha=0.01):
 
 ## Визуализация
 
-![Leaky ReLU](content/attach/leaky_relu.png)
+![[leaky_relu.png]]
 
 ---
 # Ссылки:

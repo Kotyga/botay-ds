@@ -32,7 +32,7 @@ def gelu(x):
 
 ## Визуализация
 
-![GELU](content/attach/gelu.png)
+![[gelu.png]]
 
 ---
 # Ссылки:
