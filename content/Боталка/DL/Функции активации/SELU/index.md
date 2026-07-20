@@ -11,6 +11,7 @@ title: SELU
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -21,14 +22,21 @@ def selu(x, lam=1.0507009873554804934193349852946, alpha=1.673263242354377284817
     Apply SELU activation element-wise.
     Returns a list of floats rounded to 4 decimal places.
     """
-    for i in range(len(x)):
-        if x[i] > 0:
-            x[i] = lam * x[i]
-        else:
-            x[i] = lam * alpha * (np.exp(x[i]) - 1)
-    
-    return x
+    x = np.asarray(x, dtype=float)
+    return lam * np.where(
+        x > 0,
+        x,
+        alpha * (np.exp(x) - 1)
+    )
 ```
+
+## Визуализация
+
+![Sigmoid](content/attach/selu_lam.png)
+
+![Sigmoid](content/attach/selu_alpha.png)
+
+![Sigmoid](content/attach/selu.png)
 
 ---
 # Ссылки:

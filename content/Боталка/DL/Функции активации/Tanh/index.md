@@ -11,6 +11,7 @@ title: Tanh
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -23,6 +24,10 @@ def tanh(x):
     x = np.asarray(x, dtype=float)
     return (np.exp(x) - np.exp(-x))/(np.exp(x) + np.exp(-x))
 ```
+
+## Визуализация
+
+![Tanh](content/attach/tanh.png)
 
 ---
 # Ссылки:

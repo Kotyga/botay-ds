@@ -11,6 +11,7 @@ title: Swish
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -26,6 +27,10 @@ def swish(x):
     x = np.asarray(x, dtype=float)
     return x * sigma(x)
 ```
+
+## Визуализация
+
+![Swish](content/attach/swish.png)
 
 ---
 # Ссылки:

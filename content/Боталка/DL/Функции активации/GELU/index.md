@@ -11,6 +11,7 @@ title: GELU
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -28,6 +29,10 @@ def gelu(x):
     x = np.asarray(x, dtype=float)
     return 0.5 * x * (1 + special.erf(x * correct))
 ```
+
+## Визуализация
+
+![GELU](content/attach/gelu.png)
 
 ---
 # Ссылки:

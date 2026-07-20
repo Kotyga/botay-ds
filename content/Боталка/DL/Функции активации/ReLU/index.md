@@ -11,6 +11,7 @@ title: ReLU
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -23,6 +24,10 @@ def relu(x):
     x = np.asarray(x, dtype=float)
     return np.maximum(x, 0)
 ```
+
+## Визуализация
+
+![RELU](content/attach/relu.png)
 
 ---
 # Ссылки:

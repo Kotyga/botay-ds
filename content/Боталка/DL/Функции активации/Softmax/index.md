@@ -11,6 +11,7 @@ title: Softmax
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -28,6 +29,10 @@ def softmax(x):
 
     return exp_x / np.sum(exp_x, axis=-1, keepdims=True)
 ```
+
+## Визуализация
+
+![Softmax](content/attach/softmax.png)
 
 ---
 # Ссылки:

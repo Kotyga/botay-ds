@@ -10,6 +10,7 @@ title: ELU
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -19,12 +20,13 @@ def elu(x, alpha):
     """
     Apply ELU activation to each element.
     """
-    for i in range(len(x)):
-        if x[i] <= 0:
-            x[i] = alpha * (np.exp(x[i]) - 1) 
-    
-    return x
+    x = np.asarray(x, dtype=float)
+    return np.where(x > 0, x, alpha * (np.exp(x) - 1))
 ```
+
+## Визуализация
+
+![ELU](content/attach/elu.png)
 
 ---
 # Ссылки:

@@ -11,6 +11,7 @@ title: Sigmoid
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -24,6 +25,10 @@ def sigmoid(x):
     return 1/(1 + np.exp(-x))
     
 ```
+
+## Визуализация
+
+![Sigmoid](content/attach/sigmoid.png)
 
 ---
 # Ссылки:

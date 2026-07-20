@@ -11,6 +11,7 @@ title: Leaky ReLU
 # Теория
 
 coming soon...
+
 ## Реализация на numpy:
 
 ```python
@@ -23,6 +24,10 @@ def leaky_relu(x, alpha=0.01):
     x = np.asarray(x, dtype=float)
     return np.where(x >= 0, x, alpha * x)
 ```
+
+## Визуализация
+
+![Leaky ReLU](content/attach/leaky_relu.png)
 
 ---
 # Ссылки:
