@@ -5,7 +5,7 @@ title: Sigmoid
 2026-07-20 в 12:29
 
 Статус: `in progress`
-Тег: [[content/Боталка/DL/Функции активации/index|index]] #sigmoid
+Тег: #Функции_активации #sigmoid
 
 ---
 # Теория
