@@ -29,26 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#f8f8ff", // основной фон: очень светлый сиренево-голубой
+          lightgray: "#e9ebf7", // блоки, границы, фон кода
+          gray: "#a5abc3", // второстепенные элементы
+          darkgray: "#4b526a", // основной текст
+          dark: "#25283b", // заголовки
+          secondary: "#3f67a8", // ссылки и синий акцент
+          tertiary: "#7556b8", // сиренево-фиолетовый акцент
+          highlight: "rgba(46, 169, 174, 0.13)", // мягкая бирюзовая подсветка
+          textHighlight: "rgba(185, 178, 255, 0.48)", // выделение текста
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#171827", // основной тёмный фон
+          lightgray: "#282a40", // блоки и границы
+          gray: "#777d99", // второстепенные элементы
+          darkgray: "#c8cce0", // основной текст
+          dark: "#f1f2ff", // заголовки
+          secondary: "#82b7eb", // голубые ссылки
+          tertiary: "#b69ae8", // сиреневый акцент
+          highlight: "rgba(53, 196, 199, 0.14)", // бирюзовая подсветка
+          textHighlight: "rgba(111, 88, 180, 0.55)", // выделение текста
         },
       },
     },
