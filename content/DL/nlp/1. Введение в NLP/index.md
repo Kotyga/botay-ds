@@ -97,6 +97,4 @@ NLP-задача — это не обучение модели, а систем�
 ---
 # Ссылки:
 
-1. [Chip Huyen. Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107959/)
-2. [Jurafsky D., Martin J. H. Speech and Language Processing — Chapter 1, 17, 26](https://web.stanford.edu/jurafsky/slp3/)
-3. [Лена Воита. NLP Course](https://lena-voita.github.io/nlp_course.html)
+1. [Лена Воита. NLP Course](https://lena-voita.github.io/nlp_course.html)

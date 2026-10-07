@@ -315,7 +315,7 @@ $$
 
 - **$n \to \infty$ при фиксированном $p$.** Число возможных исходов растёт, и дискретное пространство переходит в непрерывное: биномиальное распределение с параметрами $\mu = np$ и $\sigma^2 = np(1 - p)$ переходит в **гауссово (нормальное)** — вероятность «ровно $k$ успехов» сменяется плотностью вероятности около точки $k$. Это то самое нормальное распределение, которое предполагает Gaussian NB из раздела ниже.
 - **$n$ велико, $p$ мало.** Успехи становятся редкими, и биномиальное распределение переходит в **распределение Пуассона** с $\lambda = np$: $P(X = m) = \frac{\lambda^m e^{-\lambda}}{m!}$. Классическая область применения — число редких событий за фиксированный промежуток времени или в фиксированной области пространства.
-- **$n$ просто велико.** Биномиальный коэффициент $\binom{n}{k}$ уже неудобно считать напрямую, поэтому используют приближения формулы Лапласа — оценку через логарифмы и стirlingову аппроксимацию факториала, которая даёт коэффициент без перемножения огромных чисел.
+- **$n$ просто велико.** Биномиальный коэффициент $\binom{n}{k}$ уже неудобно считать напрямую, поэтому используют приближения формулы Лапласа.
 
 **Мультиномиальное распределение** — количество исходов каждого из $k$ возможных типов в $n$ независимых категориальных испытаниях:
 
@@ -369,7 +369,7 @@ N(w, C) + \alpha
 $$
 
 > [!INFO] **Сглаживание Лапласа**
-> Сглаживание Лапласа — приём, который добавляет константу $\alpha$ ко всем счётчикам слов: ни одно слово не получает нулевую вероятность, и появление неизвестного слова не обнуляет правдоподобие всего документа. При $\alpha = 1$ получается классическое add-one smoothing.
+> Сглаживание Лапласа — приём, который добавляет константу $\alpha$ ко всем счётчикам слов: ни одно слово не получает нулевую вероятность, и появление неизвестного слова не обнуляет правдоподобие всего документа.
 
 При $\alpha = 1$ получается классическое add-one smoothing. Значение $\alpha$ обычно подбирают по кросс-валидации.
 
@@ -528,10 +528,6 @@ P(\text{Ham} \mid \text{"buy now"}) = 0{,}25
 $$
 
 Следовательно, сообщение классифицируется как `Spam`.
-
-### Реализация с нуля
-
-Наивный Байес легко реализовать вручную: собрать словарь обучающей выборки, подсчитать число вхождений каждого слова по классам, оценить априорные вероятности классов и вероятности слов внутри классов, а для нового сообщения перемножить вероятности его слов, нормировать оценки до апостериорных вероятностей и выбрать класс с большим значением. Готовые таблички со счётчиками, априорными, правдоподобиями и апостериорными вероятностями удобно вывести через `pandas` — весь код описан в ноутбуке [Multinomial Naive Bayes](https://github.com/Kotyga/ML_toolkit/blob/main/Multinomial_Naive_Bayes.ipynb).
 
 ### Почему нужны логарифмы
 
@@ -858,7 +854,6 @@ z
 \sum_{i=1}^{n} \theta_i x_i.
 $$
 
-Полный цикл обучения градиентным спуском — преобразование текстов в счётные векторы, обновление весов по градиенту и журнал ошибки на каждой итерации — расписан в ноутбуке [Логистическая регрессия](https://github.com/Kotyga/ML_toolkit/blob/main/Логистическая_регрессия.ipynb).
 
 Снижение ошибки в процессе обучения:
 
@@ -1194,15 +1189,24 @@ $$
 - Почему логистическая потеря штрафует уверенные ошибки сильнее неуверенных?
 - Представьте, что у вас есть задача классификации текста. Какие вопросы вы зададите перед выбором модели? Какие факторы повлияют на решение?
 - Почему нельзя выбрать метрику «после того, как посчитали Accuracy», и что будет, если метать Accuracy на несбалансированных данных?
+- Как RNN и CNN применяются к тексту?
+- Почему в F1 используется гармоническое,  а не арифметическое среднее precision и recall?
+- Можно ли вместо F1 использовать  геометрическое среднее precision и recall?
+- Что такое априорное распределение,  likelihood и апостериорное распределение?
+- Почему обычно оптимизируют логарифм правдоподобия?
 
 ---
 # Ссылки:
 
-1. [Jurafsky D., Martin J. H. Speech and Language Processing — Logistic Regression and Text Classification](https://web.stanford.edu/jurafsky/slp3/chapter8.html)
-2. [scikit-learn: Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html)
-3. [scikit-learn: MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
-4. [scikit-learn: Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
-5. [scikit-learn: Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html)
-6. [Naive Bayes classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier)
-7. [Мультиномиальный коэффициент](https://ru.wikipedia.org/wiki/Мультиномиальный_коэффициент)
-8. [Multinomial distribution](https://en.wikipedia.org/wiki/Multinomial_distribution)
+1. [scikit-learn: Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html)
+2. [scikit-learn: MultinomialNB](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html)
+3. [scikit-learn: Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+4. [scikit-learn: Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html)
+5. [Naive Bayes classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier)
+6. [Мультиномиальный коэффициент](https://ru.wikipedia.org/wiki/Мультиномиальный_коэффициент)
+7. [Multinomial distribution](https://en.wikipedia.org/wiki/Multinomial_distribution)
+8. [Логистическая регрессия](https://www.dmitrymakarov.ru/learning/logistic/)
+9. [Линейные модели](https://education.yandex.ru/handbook/ml/article/linear-models)
+10. [Метрики регрессии и классификации](https://education.yandex.ru/handbook/ml/article/metriki-klassifikacii-i-regressii)
+11. [Вероятностный подход в ML](https://education.yandex.ru/handbook/ml/article/veroyatnostnyj-podhod-v-ml)
+12. [Байесовский подход к оцениванию](https://education.yandex.ru/handbook/ml/article/bajesovskij-podhod-k-ocenivaniyu)
