@@ -10,3 +10,5 @@ private/
 .replit
 replit.nix
 content/6 - Шаблоны
+skills/nlp-diagram-style/SKILL.md
+skills/nlp-diagram-style/references/transformer-prompts.json
